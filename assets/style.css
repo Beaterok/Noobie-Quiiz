@@ -1,0 +1,75 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: rgb(25, 25, 25);
+    color:rgb(196, 196, 196);
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(44, 44, 115);
+    width: 100%;
+    text-size-adjust: auto;
+    color: white;
+}
+header h1{
+    font-size: 40px;
+}
+header span{
+    font-size: 30px;
+}
+ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+div {
+    
+    font-size: 20px;
+    text-align: center;
+}
+#Questions{
+    display: flex;
+    flex-direction: column;
+    border-top: 5px;
+    border-style: solid;
+    border-color: black;
+    font-size: 30px;
+    background-color: rgb(77, 42, 208);
+    width: 100%;
+    color: white;
+}
+input{
+ height: 30px;
+ font-size: 20px;
+ width: 30%;
+ align-self: center;
+}
+#Choices{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+#ifCorrect{
+    border-top: black 10px;
+    border-style: solid;
+    border-width: 30px;
+    font-size: 40px;
+    text-align: center;
+    color: rgb(133, 33, 146);
+
+}
+
+button{
+    background-color: #6f459c; 
+  margin-top: 20px;
+  color: white;
+  padding: 15px 30px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+
+}
