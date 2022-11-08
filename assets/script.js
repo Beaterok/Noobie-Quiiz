@@ -162,13 +162,14 @@ var nextQuestion = function () {
 
 // saves name and score into local storage
 var submitName = function(event){
-    
+    disScores();
     event.addEventListener("click", function () {
     var nameInput = document.querySelector('input');
     stats.name = nameInput.value;
     console.log(stats.name);
     stats.score = secondsLeft;
     allStats.push(stats);
+    localStorage.setItem("stats", JSON.stringify(allStats));
     window.localStorage.setItem("stats", JSON.stringify(allStats));
     var btn =document.querySelector('button');
     btn.remove();
@@ -177,6 +178,7 @@ var submitName = function(event){
     btn.textContent = "View";
     Choices.appendChild(btn);
     viewScore(btn);
+    disScores();
     });
     
 }
@@ -192,9 +194,19 @@ var viewScore = function (event){
         window.alert("Name: "+ allStats[i].name + " \nCorrect: " + allStats[i].correct + " \nScore: " + allStats[i].score);
      
     }
+    
    });
 }
-
+var disScores = function(){
+    if (allStats !== null) {
+        for (var i = 0; i < allStats.length; i++) {
+            console.log("stats");
+            var createLi = document.createElement("li");
+            createLi.textContent = "Name: " + allStats[i].name + " Score: " + allStats[i].score;
+            Correct.appendChild(createLi);
+        }
+    }
+}
 
 
 //function the starts the game on click of the button
